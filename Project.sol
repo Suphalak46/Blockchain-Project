@@ -9,22 +9,22 @@ contract Inheritance {
         owner = msg.sender;
     }
 
-    //1. put fund in smart contract
+    //1. put fund in smart contract ใส่กองทุนในสัญญาอัจฉริยะ
     function addFunds() payable public {
     }
 
-    //2. view balance
+    //2. view balance ดูยอดเงิน
     function viewFunds() public view returns(uint){
         return address(this).balance;
     }
 
-    //3. add structure heir
+    //3. add structure heir 3.เพิ่มทายาทโครงสร้าง
     struct Heir {
         address payable walletAddress;
         string name;
     }
 
-    //3.2 add heir
+    //3.2 add heir เพิ่มทายาท
     function addHeir(address payable walletAddress, string memory name) public {
         require(msg.sender == owner, "Only the owner can call this function");
         bool heirExists = false;
@@ -41,7 +41,7 @@ contract Inheritance {
         }
     }
 
-    //4. remove heir
+    //4. remove heir ถอดทายาท
     function removeHeir(address payable walletAddress) public {
         require(msg.sender == owner, "Only the owner can call this function");
         if(heirs.length > 0) {
@@ -57,12 +57,12 @@ contract Inheritance {
         }
     }
 
-    //5. view heirs
+    //5. view heirs ดูทายาท
     function viewHeirs() public view returns (Heir[] memory) {
         return heirs;
     }
 
-    //6. distribute inheritance
+    //6. distribute inheritance แจกจ่ายมรดก
     function distributeInheritance() public {
         require(address(this).balance > 0, "Insufficient balance in the contract");
         if(heirs.length >= 1) {
@@ -73,7 +73,7 @@ contract Inheritance {
         }
     }
 
-    // transfer money
+    // transfer money โอนเงิน
     function transfer(address payable walletAddress, uint amount) internal {
         walletAddress.transfer(amount);
     }
