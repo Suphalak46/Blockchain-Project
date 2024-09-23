@@ -28,6 +28,11 @@
 						"internalType": "string",
 						"name": "name",
 						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "percentage",
+						"type": "uint256"
 					}
 				],
 				"name": "addHeir",
@@ -83,6 +88,11 @@
 								"internalType": "string",
 								"name": "name",
 								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "percentage",
+								"type": "uint256"
 							}
 						],
 						"internalType": "struct Inheritance.Heir[]",
@@ -122,11 +132,11 @@
 	},
 	"sources": {
 		"Project.sol": {
-			"keccak256": "0xb7351f4fec0e1f721f8eb32414ed983cbb963b670fafe197df72584aa6f49560",
+			"keccak256": "0x7d72f142305f07e712f74f823afc0e6245f14792328ebfea0cc6ebffbadfc93a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d5a579409eea9299c01aa6db580add94c0a58564f1c46e76e64e620f5e330c1a",
-				"dweb:/ipfs/Qme5FjFbDWTaHhcHQCU6zDZ5VDkcxhgeCZYzFs7rREqxZw"
+				"bzz-raw://5bfacffb9846ec5c747bdf68c564bb2f76f7384cda48393270f394039075445e",
+				"dweb:/ipfs/QmbGDtm8riqjS4rHwgiiPCcN1viJzUEYGGyS6i63fTsnG3"
 			]
 		}
 	},
